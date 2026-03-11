@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyFinances</title>
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!--AREA DO HEADER-->
+    <header>
+        <div class="header-area">
+            <div class="logo-header">
+                MY<span>FINANCES</span>
+            </div>
+            
+            <div class="carousel-container">
+                <div class="carousel">
+                    <div class="carousel-data">Jan</div>
+                    <div class="carousel-data ">Fev</div>
+                    <div class="carousel-data active ">Mar</div>
+                    <div class="carousel-data ">Abr</div>
+                    <div class="carousel-data ">jun</div>
+                    <div class="carousel-data">jul</div>
+                </div>
+            </div>
+            
+            <div class="hamburguer-menu">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="debt-summary">
+            <div class="summary-info">
+                <div class="revenue">
+                    <div class="revenue-simbol">
+                        <div class="revenue-circle">
+                            <i class="fa-solid fa-arrow-up"></i>
+                        </div>
+                    </div>
+                    <div class="revenue-info">
+                        <h2>RECEITAS</h2>
+                        <h1>0</h1>
+                    </div>
+                </div>
+                <div class="expenses">
+                    <div class="expenses-simbol">
+                        <i class="fa-solid fa-arrow-down"></i>
+                    </div>
+                    <div class="expenses-info">
+                        <h2>despesas</h2>
+                        <h1>0</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="contas-add">
+            <div class="allContas">
+                <div class="contas-area">
+                    <div class="revenue-add-area">
+                        <div class="item">NOME</div>
+                        <div class="item">VALOR</div>
+                        <div class="item">DIA DE RECEBER</div>
+        
+                       
+                    </div>
+                <div class="add-area-btn-revenue">
+                    <div class="add-revenue">
+                        <span>+</span> <h1>ADICIONAR RECEITA</h1>
+                    </div>
+                </div>
+                </div>
+                <div class="contas-area2">
+                    <div class="expenses-add-area">
+                        <div class="item">NOME</div>
+                        <div class="item">VALOR</div>
+                        <div class="item">CATEGORIA</div>
+                        <div class="item">DIA DE PAY</div>
+                    </div>
+                    <div class="add-area-btn-expense">
+                        <div class="add-expenses">
+                            <span>+</span> <h1>ADICIONAR DESPESA</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="popup-add-value">
+                <div class="popup-add-value-header">
+                    <div class="popup-margin">
+                        <div class="popup-add-value-header-info">
+                            <div class="revenue-circle">
+                                <i class="fa-solid fa-arrow-up"></i>
+                            </div>
+                            <h2>
+                                NOVA RECEITA
+                            </h2>
+                        </div>
+
+                        <div class="popup-add-value-header-info-close">
+                            <div class="close-popup">X</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="popup-add-value-main">
+                    <div class="input-container">
+                        <div class="input-group">
+                            <label for="name">Ex: Salário, Freelance etc..</label>
+                            <input id="nome" type="text" placeholder="Nome da receita">
+                        </div>
+                        <div class="input-group">
+                            <label for="name">VALOR (R$)</label>
+                            <input id="valor" type="number" placeholder="Valor da receita">
+                        </div>
+                        <div class="input-group">
+                            <label for="name">DIA DE RECEBER</label>
+                            <input id="date" type="date">
+                        </div>
+                    </div>
+
+                    <div class="buttons-popup">
+                        <div class="cancel-button">CANCELAR
+                        </div>
+                        <div class="save-button">
+                            <h2>+</h2>
+                            <h2>ADICIONAR RECEITA</h2>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            
+        <div class="popup-add-expense">
+            <div class="popup-add-expense-header">
+                <div class="popup-margin">
+                    <div class="popup-add-expense-header-info">
+                        <div class="expenses-simbol">
+                            <i class="fa-solid fa-arrow-down"></i>
+                        </div>
+                        <h2>NOVA DESPESA</h2>
+                    </div>
+
+                    <div class="popup-add-expense-header-info-close">
+                        <div class="close-popup-expense">X</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="popup-add-value-main">
+                <div class="input-container">
+                    <div class="input-group">
+                        <label for="nome-despesa">Ex: Conta de Luz, Mercado etc..</label>
+                        <input id="nome-despesa" type="text" placeholder="Nome da despesa">
+                    </div>
+                    <div class="input-group">
+                        <label for="valor-despesa">VALOR (R$)</label>
+                        <input id="valor-despesa" type="number" placeholder="Valor da despesa">
+                    </div>
+                    <div class="input-group">
+                        <label for="categoria-despesa">CATEGORIA</label>
+                        <input id="categoria-despesa" type="text" placeholder="Ex: Lazer, Fixa...">
+                    </div>
+                    <div class="input-group">
+                        <label for="date-despesa">DIA DE PAGAMENTO</label>
+                        <input id="date-despesa" type="date">
+                    </div>
+                </div>
+
+                <div class="buttons-popup">
+                    <div class="cancel-button cancel-expense">CANCELAR</div>
+                    <div class="save-button save-expense">
+                        <h2>+</h2>
+                        <h2>ADICIONAR DESPESA</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        </section>
+    </main>
+</body>
+<script src="/script.js"></script>
+</html>
