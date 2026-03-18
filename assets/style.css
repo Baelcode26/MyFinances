@@ -503,3 +503,81 @@ header{
     color: #14181c;
     box-shadow: 2px 4px 5px #701411;
 }
+
+
+
+.graphc{
+    margin: 0px auto 20px auto;
+    width: 95%;
+    height: 300px;
+    background-color: #fff;
+}
+
+.graphc-area{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.graphc-area-resumo{
+    flex: 1;
+
+}
+
+.expense-summary{
+    display: flex;
+    flex: 3;
+    
+}
+
+.higher-expenses{
+    flex: 1;
+}
+
+.higher-expenses-info{
+    display: flex;
+    justify-content: space-between;
+}
+.simbol-with-name-expenses{
+    display: flex;
+    align-items: center;
+}
+
+.simbol-with-name-expenses .simbol{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: red;
+    margin-right: 5px;
+}
+
+.higher-expenses-titulo,
+.nearing-expenses-titulo{
+    width: 100%;
+    background-color: #00895b;
+    text-align: center;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 8px 0px;
+}
+
+.higher-expense-description,
+.nearing-expense-description{
+    display: flex;
+    justify-content: space-between;
+    background-color:#b5b5b5;
+    font-size: 0.8rem;
+    padding: 8px 8px;
+    color: #00875f;
+}
+
+.higher-expenses-area{
+    margin-right: 10px;
+}
+
+.nearing-expiration{
+    flex: 1;
+}
+
+
