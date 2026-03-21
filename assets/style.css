@@ -366,6 +366,13 @@ header{
     border: 1px solid #d9d9d9;
     
 }
+.input-group select {
+    margin-bottom: 20px;
+    padding: 10px 10px;
+    border-radius: 10px;
+    border: 1px solid #d9d9d9;
+    
+}
 
 .input-group input:focus{
     outline: none;
@@ -506,6 +513,70 @@ header{
 
 
 
+
+.expense-summary{
+    display: flex;
+    flex: 3;
+    
+}
+
+.higher-expenses{
+    flex: 1;
+}
+
+.higher-expenses-info,
+.nearing-expenses-info{
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    padding: 7px;
+    border: solid 1px #b5b5b5;
+}
+.simbol-with-name-expenses,
+.nearing-simbol-with-name-expenses{
+    display: flex;
+    align-items: center;
+}
+
+.simbol-with-name-expenses .simbol,
+.nearing-simbol-with-name-expenses .simbol{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.higher-expenses-titulo,
+.nearing-expenses-titulo{
+    width: 100%;
+    background-color: #00895b;
+    text-align: center;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 8px 0px;
+}
+
+.higher-expense-description,
+.nearing-expense-description{
+    display: flex;
+    justify-content: space-between;
+    background-color:#b5b5b5;
+    font-size: 0.6rem;
+    padding: 8px 8px;
+    color: #00875f;
+}
+
+.higher-expenses-area{
+    margin-right: 10px;
+}
+
+.nearing-expiration{
+    flex: 1;
+}
+
+
+
 .graphc{
     margin: 0px auto 20px auto;
     width: 95%;
@@ -520,64 +591,34 @@ header{
 }
 
 .graphc-area-resumo{
-    flex: 1;
-
-}
-
-.expense-summary{
-    display: flex;
-    flex: 3;
-    
-}
-
-.higher-expenses{
-    flex: 1;
-}
-
-.higher-expenses-info{
-    display: flex;
-    justify-content: space-between;
-}
-.simbol-with-name-expenses{
     display: flex;
     align-items: center;
-}
-
-.simbol-with-name-expenses .simbol{
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: red;
-    margin-right: 5px;
-}
-
-.higher-expenses-titulo,
-.nearing-expenses-titulo{
-    width: 100%;
-    background-color: #00895b;
-    text-align: center;
-    color: #fff;
-    font-size: 1.5rem;
-    font-weight: 500;
-    padding: 8px 0px;
-}
-
-.higher-expense-description,
-.nearing-expense-description{
-    display: flex;
-    justify-content: space-between;
-    background-color:#b5b5b5;
-    font-size: 0.8rem;
-    padding: 8px 8px;
-    color: #00875f;
-}
-
-.higher-expenses-area{
-    margin-right: 10px;
-}
-
-.nearing-expiration{
+    justify-content: center;
     flex: 1;
+
 }
 
+.graphc-circle{
+    width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  
+  background: 
+    /* 1. Cria o círculo branco no centro (o "furo" da rosca) */
+    radial-gradient(circle, #ffffff 55%, transparent 56%),
+            conic-gradient(#e0e0e0 0% 100%);
+  
+  /* Flexbox para centralizar o texto bem no meio do buraco */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  /* Uma sombrinha para dar o efeito 3D da sua imagem */
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
+}
 
+.center-text{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #701411;
+}
