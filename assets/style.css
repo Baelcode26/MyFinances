@@ -17,7 +17,7 @@ header{
     width: 95%;
     height: 100px;
     background-color:#00895b;
-    margin: 20px auto 20px auto;
+    margin: 20px auto 0px auto;
 }
 
 .header-area{
@@ -56,41 +56,105 @@ header{
 }
 
 
-.carousel-container{
-    width: 100%;
+.carousel-container {
+    /* Define a largura exata para mostrar cerca de 3 meses (ajuste se necessário) */
+    width: 250px; 
     height: 50px;
-    max-width: 23%;
-
-    overflow: hidden;
+    margin-right: 5%; 
+    overflow-x: auto; /* Permite a rolagem horizontal */
+    scroll-behavior: smooth; /* Animação suave ao rolar */
+    scroll-snap-type: x mandatory; /* Faz os itens "encaixarem" no lugar */
+    
+    /* Esconde a barra de rolagem nativa */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 }
 
-.carousel{
+/* Esconde a barra de rolagem no Chrome, Safari e Opera */
+.carousel-container::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel {
     height: 100%;
     display: flex;
     align-items: center;
-    margin-right: -80px;
-    justify-content: center;
-
+    justify-content: flex-start; /* Alinha no começo em vez do centro */
+    gap: 15px; /* Espaçamento entre os meses */
+    padding: 0 10px;
+    width: max-content; /* Muito importante: permite que a div cresça conforme os itens */
 }
 
-.carousel .carousel-data{
-    font-size:2rem;
+.carousel .carousel-data {
+    font-size: 2rem;
     font-weight: 600;
     text-transform: uppercase;
-    margin-right: 10px;
     opacity: 0.6;
     color: #fff;
-    text-align:center;
+    text-align: center;
     cursor: pointer;
+    
+    /* Define que cada item tenha mais ou menos 1/3 da tela visível (80px) */
+    min-width: 80px; 
+    scroll-snap-align: center; /* Faz o mês parar sempre no meio ao fim da rolagem */
+    transition: opacity 0.3s, font-size 0.3s;
+    user-select: none; /* Evita que o texto seja selecionado de azul enquanto o usuário arrasta */
 }
 
-.carousel  .active {
+.carousel .active {
     opacity: 1;
     font-size: 2.5rem;
 }
-.carousel .carousel-data:last-child{
-    margin: 0;
+
+
+.user-info{
+    margin: 0px auto 20px auto;
+    width: 95%;
+    height: 100px;
 }
+.user-info-area{
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    width: 40%;
+    height: 100%;
+    padding: 10px;
+}
+
+.user-info-img{
+    background-image: url("/assets/img/user.jpg");
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #00875f;
+}
+
+
+.user-info-sumary{
+    text-align: center;
+}
+
+.user-info-sumary h3{
+    color: #9e9e9e;
+    font-weight: 500;
+    font-size: 1rem;
+    margin-bottom: -6px;
+}
+
+.user-info-sumary i{
+    cursor: pointer;
+}
+
+.name-user-info{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #00875f;
+}
+
+
+
 
 .debt-summary{
     margin:0px auto 20px auto;
@@ -147,6 +211,13 @@ header{
     width: 100%;
 }
 
+.item {
+    max-height: 39px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .revenue-add-area{
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Define 3 colunas */

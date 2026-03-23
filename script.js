@@ -161,7 +161,7 @@ saveButtonExpenses.addEventListener("click", () => {
 
     updateDates()
     atualizarGrafico()
-
+    updateCont()
     nomeExpense.value = "";
     valorExpense.value = "";
     categoryExpense.value = "";
@@ -208,6 +208,7 @@ saveButton.addEventListener("click", () => {
 
     addArea.insertAdjacentHTML('beforeend', novosElementos);
 
+    updateCont()
 
     // 4. Limpar e fechar
     nomeRevenue.value = "";
@@ -215,9 +216,14 @@ saveButton.addEventListener("click", () => {
     dateRevenue.value = "";
 
     popupAddRevenue.classList.remove('popup-open');
+    
 });
 
-
+//area do header de usuario
+function updateCont(){
+    let totalcont = document.querySelector(".user-info-sumary h1");
+    totalcont.innerHTML =(totalRevenueSum - totalExpensesSum).toLocaleString('pt-br', {minimumFractionDigits: 2}) ; 
+}
 
 //area do grafico
 
@@ -305,3 +311,68 @@ function atualizarGrafico() {
         ${textoConicGradient}
     `;
 }
+
+
+let totalcont = document.querySelector(".user-info-sumary h1");
+let eyecont = document.querySelector(".user-info-sumary i")
+eyecont.addEventListener("click", ()=>{
+    console.log(eyecont)
+    eyecont.classList.toggle("fa-eye-slash");
+    eyecont.classList.toggle("fa-eye")
+    if(eyecont.classList.contains("fa-eye-slash")){
+        totalcont.innerHTML = "****"
+    }else{
+        updateCont()
+    }
+    
+})
+
+
+
+const carouselContainer = document.querySelector('.carousel-container');
+const carouselItems = document.querySelectorAll('.carousel-data');
+
+// 1. Lógica para ARRASTAR com o mouse (Drag to Scroll)
+let isDown = false;
+let startX;
+let scrollLeft;
+
+carouselContainer.addEventListener('mousedown', (e) => {
+    isDown = true;
+    startX = e.pageX - carouselContainer.offsetLeft;
+    scrollLeft = carouselContainer.scrollLeft;
+    // Desativa o "encaixe" magnético enquanto estiver arrastando para ficar mais fluido
+    carouselContainer.style.scrollSnapType = 'none'; 
+});
+
+carouselContainer.addEventListener('mouseleave', () => {
+    isDown = false;
+    carouselContainer.style.scrollSnapType = 'x mandatory'; // Reativa o encaixe
+});
+
+carouselContainer.addEventListener('mouseup', () => {
+    isDown = false;
+    carouselContainer.style.scrollSnapType = 'x mandatory'; // Reativa o encaixe
+});
+
+carouselContainer.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - carouselContainer.offsetLeft;
+    const walk = (x - startX) * 2; // O número 2 multiplica a velocidade do arrasto
+    carouselContainer.scrollLeft = scrollLeft - walk;
+});
+
+// 2. Lógica para CLICAR e selecionar o mês
+carouselItems.forEach(item => {
+    item.addEventListener('click', () => {
+        // Remove a classe 'active' de todos os meses
+        carouselItems.forEach(el => el.classList.remove('active'));
+        
+        // Adiciona a classe 'active' apenas no que foi clicado
+        item.classList.add('active');
+        
+        // Desliza suavemente o mês clicado para o centro da caixinha
+        item.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+    });
+});
