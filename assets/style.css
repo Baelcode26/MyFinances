@@ -640,6 +640,7 @@ header{
 
 .higher-expenses-area{
     margin-right: 10px;
+    margin-bottom: 20px;
 }
 
 .nearing-expiration{
@@ -692,4 +693,208 @@ header{
     font-size: 1.2rem;
     font-weight: bold;
     color: #701411;
+}
+
+
+
+/* 
+medias querys
+*/
+
+
+@media (max-width: 1200px){
+    .logo-header{
+        font-size: 1.5rem;
+    }
+
+    .carousel{
+        gap: 0px;
+    }
+
+    .carousel .carousel-data{
+        font-size: 1.4rem;
+        min-width: 70px;
+    }
+    .hamburguer-menu{
+        width: 40px;
+        height: 30px;
+    }
+    .hamburguer-menu .line {
+        height: 3px;
+    }
+
+    .higher-expenses-info, .nearing-expenses-info{
+        font-size: 0.6rem;
+    }
+
+    .higher-expense-description, .nearing-expense-description {
+        font-size: 0.5rem;
+    }
+
+    .higher-expenses-titulo, .nearing-expenses-titulo{
+        font-size: 1rem;
+    }
+
+    .itemHead{
+        font-size:0.8rem;
+    }
+    .expenses-add-area .item{
+        text-align: center;
+    }
+
+    .revenue-circle, .expenses-simbol {
+        width: 60px;
+        height: 60px;
+    }
+    .revenue-circle i, .expenses-simbol i{
+        font-size: 30px;
+    }
+
+    .user-info-sumary h3    {
+        font-size: 0.7rem;
+    }
+
+    .user-info-sumary h1{
+        font-size: 1.5rem;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 930px){
+    .higher-expenses-info, .nearing-expenses-info{
+        font-size: 0.6rem;
+    }
+    .expense-summary{
+        flex-direction: column;
+    }
+
+    .higher-expenses,.nearing-expiration{
+        margin-left: 20px;
+    }
+    .higher-expenses-area{
+        margin-right: 0px;
+    }
+    .graphc{
+        height: auto;
+    }
+
+    .graphc-area{
+        padding: 10px 0px 10px 20px;
+    }
+    .revenue-info h2,
+    .expenses-info h2{
+        font-size: 0.9rem;
+    }
+    .revenue-info h1,
+    .expenses-info h1{
+        font-size: 1.5rem;
+    }
+
+    .expenses-add-area .item,
+    .revenue-add-area .item{
+        font-size: 0.7rem;
+    }
+
+    .graphc-circle {
+        width: 180px;
+        height: 180px;
+    }
+}
+
+
+@media (max-width: 750px){
+
+    .higher-expenses-info, .nearing-expenses-info{
+        font-size: 0.5rem;
+    }
+
+    .allContas{
+        flex-direction: column;
+    }
+    .contas-area{
+        margin-bottom: 20px;
+    }
+    .user-info-area{
+        width: 70%;
+    }
+    .carousel-container{
+        width: 140px;
+    }
+
+    .revenue-add-area{
+        margin-right: 0px;
+    }
+}
+
+@media (max-width: 600px){
+
+    
+
+    .graphc-area{
+        flex-direction: column-reverse;
+        padding: 10px 0px 10px 0px;
+    }
+    .higher-expenses, .nearing-expiration{
+        margin-left: 0px;
+    }
+    .nearing-expiration{
+        margin-bottom: 20px;
+    }
+
+    .user-info{
+        margin:0px auto 10px auto;
+    }
+}
+
+@media (max-width: 490px){
+    .expenses,
+    .revenue{
+        flex-direction: column;
+        text-align: center;
+    }
+    .revenue-circle,
+     .expenses-simbol{
+        width: 25px;
+        height: 25px;
+        margin-right: 0px;
+     }
+    .revenue-circle i,
+     .expenses-simbol i{
+        font-size: 15px;
+     }
+
+     .logo-header{
+        font-size:1rem;
+     }
+
+     .carousel .carousel-data{
+        font-size: 1rem;
+        min-width: 40px;
+     }
+
+     .carousel-container{
+        width: 100px;
+     }
+
+     .hamburguer-menu{
+        width: 25px;
+        height: 20px;
+     }
+
+     .user-info-img{
+        width: 35px;
+        height: 35px;
+     }
+
+     .user-info{
+        height: 75px;
+     }
+
+     .name-user-info{
+        font-size: 0.7rem;
+     }
+
+     .user-info-sumary h1{
+        font-size: 1rem;
+     }
 }
