@@ -18,6 +18,24 @@ function preencherSelect(){
     preencherSelect()
 
 
+//logica do menu
+let displayMenu = document.querySelector(".menu-container");
+let closeMenu = document.querySelector(".close-area");
+let hamburguerMenu = document.querySelector(".hamburguer-menu");
+let menuArea = document.querySelector(".menu-area");
+
+hamburguerMenu.addEventListener("click", ()=>{
+    hamburguerMenu.style.opacity = "0"; 
+    hamburguerMenu.style.pointerEvents = "none";
+    menuArea.classList.add("menu-open");
+})
+
+closeMenu.addEventListener("click", ()=>{
+    menuArea.classList.remove("menu-open");
+    hamburguerMenu.style.opacity = "1";
+    hamburguerMenu.style.pointerEvents = "auto";
+})
+
 
 function formatarDataBR(dataEstrangeira) {
     if (!dataEstrangeira) return "--/--/----";
